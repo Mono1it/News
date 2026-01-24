@@ -1,0 +1,111 @@
+{
+    "status": "ok",
+    "totalResults": 241,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "Mattrichman.net"
+            },
+            "author": "John Gruber",
+            "title": "The Explosive, Immediate, Early Growth of the iPhone",
+            "description": "Apple just reported earnings for the fourth calendar quarter of 2011. It sold 37.04 million iPhones, 15.43 million iPads, and 5.2 million Macs. With a record $13.06 billion in profits, it was Apple’s best quarter ever — by far. If we do some quick math with A…",
+            "url": "https://www.mattrichman.net/takeaways-from-apples-q4-2011/",
+            "urlToImage": "http://www.mattrichman.net/wp-content/uploads/2023/02/cropped-Me-People-Co-1.jpg",
+            "publishedAt": "2026-01-15T00:08:25Z",
+            "content": "Apple just reported earnings for the fourth calendar quarter of 2011. It sold 37.04 million iPhones, 15.43 million iPads, and 5.2 million Macs. With a record $13.06 billion in profits, it was Apples … [+1057 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Github.com"
+            },
+            "author": "cjpais",
+            "title": "Handy – free open source speech-to-text app",
+            "description": "A free, open source, and extensible speech-to-text application that works completely offline. - cjpais/Handy",
+            "url": "https://github.com/cjpais/Handy",
+            "urlToImage": "https://repository-images.githubusercontent.com/931888694/1519efb0-ade3-433a-913a-ee7ddd8519a6",
+            "publishedAt": "2026-01-15T05:23:18Z",
+            "content": "A free, open source, and extensible speech-to-text application that works completely offline.\r\nHandy is a cross-platform desktop application built with Tauri (Rust + React/TypeScript) that provides s… [+10468 chars]"
+        },
+        {
+        "source": {
+        "id": null,
+        "name": "Omgubuntu.co.uk"
+        },
+        "author": "Joey Sneddon",
+        "title": "Orion Browser Releases Its First Linux Alpha",
+        "description": "An alpha release of Orion for Linux, a new Webkit-based web browser from paid search engine Kagi, is out for testing – and early impressions are positive.\nYou're reading Orion Browser Releases Its First Linux Alpha, a blog post from OMG! Ubuntu. Do not reprod…",
+        "url": "https://www.omgubuntu.co.uk/2026/01/orion-browser-for-linux-alpha",
+        "urlToImage": "https://www.omgubuntu.co.uk/wp-content/uploads/2026/01/orion-linux-alpha.jpg",
+        "publishedAt": "2026-01-15T02:05:29Z",
+        "content": "An alpha release of Orion for Linux, a Webkit-based web browser developed by the search engine Kagi is out for testing though only for paid Orion+ subscribers.\r\nNot a subscriber?\r\nDon’t worry; an Ori… [+3464 chars]"
+        },
+        {
+        "source": {
+        "id": null,
+        "name": "Ifanr.com"
+        },
+        "author": "马扶摇",
+        "title": "实测国行 iPhone 绑 VISA 卡，首批支持这 8 家银行，还有更多在路上｜附绑卡指南",
+        "description": "十年之期已到！#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。\n爱范儿 |\n原文链接 ·\n查看评论 ·\n新浪微博",
+        "url": "https://www.ifanr.com/1651823",
+        "urlToImage": "https://s3.ifanr.com/wp-content/uploads/2026/01/banner-1.jpeg",
+        "publishedAt": "2026-01-15T04:08:31Z",
+        "content": "Apple Pay \r\nUSA Today\r\nApple Pay Apple Wallet 2016 \r\nApple Pay \r\n Apple Wallet app Apple Pay \r\nApple Pay POS Apple Pay \r\n2016 Apple Pay 6 \r\n Apple Pay UnionPay\r\nApple Wallet Apple Pay \r\nVisa Cash Ess… [+352 chars]"
+        },
+        {
+        "source": {
+        "id": null,
+        "name": "Ifanr.com"
+        },
+        "author": "Shawn Rain",
+        "title": "早报｜小米潘九堂：没有哪家成功的企业不大量模仿别人/携程因涉嫌垄断被立案调查/国区苹果钱包今天起支持Visa卡",
+        "description": "· 具身智能公司「组团」上春晚，总赞助金额或达 5 亿元\n· 「打工人版 Claude Code」几乎由 AI 全自动开发，10 天内完成首个版本\n· 问界 46 个月达成百万辆下线，刷新新势力最快纪录#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。\n爱范儿 |\n原文链接 ·\n查看评论 ·\n新浪微博",
+        "url": "https://www.ifanr.com/1651775",
+        "urlToImage": "https://s3.ifanr.com/images/ep/cover-images/pai_qiu_yun_dong_yuan_men_cover.jpg",
+        "publishedAt": "2026-01-15T00:30:04Z",
+        "content": "AIDONE 1 24 AI \r\nAI APPSO · 533 AIDONE \r\nAI | AIDONE \r\nAI · · Vibe Coding AI \r\n AI AI Done\r\n Google AI Studio \r\n Vibe Coding 11 AI \r\n<ul><li> Gemini InsightFlow</li><li> WebGL 3D </li><li></li><li></… [+4132 chars]"
+        },
+        {
+        "source": {
+        "id": null,
+        "name": "GSMArena.com"
+        },
+        "author": "Siddharth",
+        "title": "iPhone Fold may use a liquid metal hinge, new leak suggests",
+        "description": "The first foldable from Apple, tentatively called the iPhone Fold, is rumored to launch later this year alongside the iPhone 18 Pro series. A new leak now sheds light on its construction and the materials Apple may be using.\n\nAccording to the leak, Apple’s fo…",
+        "url": "https://www.gsmarena.com/iphone_fold_may_use_a_liquid_metal_hinge_new_leak_suggests-news-71114.php",
+        "urlToImage": "https://fdn.gsmarena.com/imgroot/news/26/01/iphone-fold-liquid-metal-hinge-leak/-952x498w6/gsmarena_000.jpg",
+        "publishedAt": "2026-01-15T07:00:03Z",
+        "content": "The first foldable from Apple, tentatively called the iPhone Fold, is rumored to launch later this year alongside the iPhone 18 Pro series. A new leak now sheds light on its construction and the mate… [+748 chars]"
+        },
+        {
+        "source": {
+        "id": null,
+        "name": "Impress.co.jp"
+        },
+        "author": "北川 研斗",
+        "title": "Apple Arcadeに「シヴィライゼーション VII」など4タイトル追加、2月5日から",
+        "description": "Appleは、ゲームサブスクリプションサービス「Apple Arcade」に来月追加される新たなラインアップを発表した。2月5日より、人気ストラテジーシリーズの最新作「シドマイヤーズ シヴィライゼーション VII Arcade Edition」を含む計4タイトルが配信される。",
+        "url": "https://k-tai.watch.impress.co.jp/docs/news/2078013.html",
+        "urlToImage": "https://k-tai.watch.impress.co.jp/img/ktw/list/2078/013/01.jpg",
+        "publishedAt": "2026-01-15T03:33:36Z",
+        "content": "AppleApple Arcade25 VII Arcade Edition4 \r\n VII Arcade EditioniPhoneiPadMac \r\n 80RetrocadeApple Vision Pro80iPhoneiPad \r\n Felicity's DoorI Love Hue Too+25 \r\n Crayola +122 \r\n Apple Arcade900200Apple On… [+5 chars]"
+        },
+        {
+        "source": {
+        "id": null,
+        "name": "Deadline"
+        },
+        "author": "Tomt",
+        "title": "‘One Battle’ Leads 2026 Dorian Awards Nominations",
+        "description": "GALECA, The Society of LGBTQ Entertainment Critics, today announced the group’s 2026 Dorian Film Award nominations for the best in mainstream and LGBTQ-themed productions. And, as with most other critics’ organizations, leading the pack is Director Paul Thoma…",
+        "url": "http://deadline.com/2026/01/dorian-awards-nominees-2026-1236683447/",
+        "urlToImage": "https://deadline.com/wp-content/uploads/2026/01/MCDONBA_WB022-1.jpg?w=1024",
+        "publishedAt": "2026-01-15T00:19:28Z",
+        "content": "GALECA, The Society of LGBTQ Entertainment Critics, today announced the group’s 2026 Dorian Film Award nominations for the best in mainstream and LGBTQ-themed productions. And, as with most other cri… [+6545 chars]"
+        }
+    ]
+}
+

@@ -1,47 +1,12 @@
 import Foundation
-import Combine
 
-enum NewsCategory: CaseIterable, Identifiable {
-    var id: NewsCategory { self }
-    
-    case business
-    case entertainment
-    case general
-    case health
-    case science
-    case sports
-    case technology
-    
-    var apiValue: String {
-        switch self {
-        case .business: "business"
-        case .entertainment: "entertainment"
-        case .general: "general"
-        case .health: "health"
-        case .science: "science"
-        case .sports: "sports"
-        case .technology: "technology"
-        }
-    }
-    
-    var title: String {
-        switch self {
-        case .business: "Business"
-        case .entertainment: "Entertainment"
-        case .general: "General"
-        case .health: "Health"
-        case .science: "Science"
-        case .sports: "Sports"
-        case .technology: "Technology"
-        }
-    }
-}
-
-final class NewsViewModel: ObservableObject {
-    @Published var articles: [Article] = []
-    @Published var isLoading = false
-    @Published var error: Error?
-    @Published var selectedCategory: NewsCategory = .business
+@MainActor
+@Observable
+final class NewsViewModel {
+    var articles: [Article] = []
+    var isLoading = false
+    var error: Error?
+    var selectedCategory: NewsCategory = .business
     
     private var pageNumber: Int = 1
     private let pageSize: Int = 20
@@ -52,60 +17,62 @@ final class NewsViewModel: ObservableObject {
         self.provider = provider
     }
     
-    func setCategory(category: NewsCategory) {
-        if category == selectedCategory || isLoading {
-            return
-        }
-        selectedCategory = category
-        initialLoad()
-    }
+//    func setCategory(category: NewsCategory) {
+//        if category == selectedCategory || isLoading {
+//            return
+//        }
+//        selectedCategory = category
+//        initialLoad()
+//    }
     
-    func initialLoad() {
+    func initialLoad() async {
         isLoading = true
         error = nil
         pageNumber = 1
         
-        provider.fetchNews(pageNumber: pageNumber, pageSize: pageSize, category: selectedCategory) { [weak self] result in
-            guard let self else { return }
+        do {
+            let articles = try await provider.fetchNews(
+                pageNumber: pageNumber,
+                pageSize: pageSize,
+                category: selectedCategory)
             
-            self.isLoading = false
-            
-            switch result {
-            case .success(let articles):
-                self.pageNumber += 1
-                self.articles = articles
-            case .failure(let error):
-                self.error = error
-            }
+            self.pageNumber += 1
+            self.articles = articles
+        } catch {
+            self.error = error
         }
+        
+        isLoading = false
     }
     
-    func fetchNextPage() {
+    func fetchNextPage() async {
         if isLoading {
             return
         }
         
         isLoading = true
-        provider.fetchNews(pageNumber: pageNumber, pageSize: pageSize, category: selectedCategory) { [weak self] result in
-            guard let self else { return }
+        
+        do {
+            let articles = try await provider.fetchNews(
+                pageNumber: pageNumber,
+                pageSize: pageSize,
+                category: selectedCategory)
             
-            self.isLoading = false
-            switch result {
-            case .success(let articles):
-                self.pageNumber += 1
-                self.articles.append(contentsOf: articles)
-            case .failure(let error):
-                self.error = error
-            }
+            self.pageNumber += 1
+            self.articles.append(contentsOf: articles)
+        } catch {
+            self.error = error
         }
+        
+        isLoading = false
     }
     
-    func fetchNextPageIfNeeded(currentIndex: Int) {
+    func fetchNextPageIfNeeded(currentIndex: Int) async {
         guard currentIndex >= articles.count - 2 else { return }
-        fetchNextPage()
+        await fetchNextPage()
     }
     
-    func loadMockData() {
+    func loadMockData() async {
         guard let url = Bundle.main.url(forResource: "NewsMock", withExtension: "json"),
               let data = try? Data(contentsOf: url)
         else {

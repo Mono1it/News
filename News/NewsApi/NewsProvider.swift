@@ -6,12 +6,13 @@ final class NewsProvider {
     private let apiKey: String = Constants.apiKey
     private var task: URLSessionTask?
     private let urlSession: URLSession
+    private let decoder = JSONDecoder()
     
     init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
     }
     
-    func makeNewsRequest(pageNumber: Int, pageSize: Int, category: NewsCategory) -> URLRequest? {
+    func makeNewsRequest(pageNumber: Int, pageSize: Int, category: NewsCategory) -> URLRequest {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "newsapi.org"
@@ -35,29 +36,29 @@ final class NewsProvider {
         return request
     }
     
-    func fetchNews(pageNumber: Int, pageSize: Int, category: NewsCategory, completion: @escaping (Result<[Article], Error>) -> Void) {
-        guard
-            let request = makeNewsRequest(pageNumber: pageNumber, pageSize: pageSize, category: category)
-        else {
-            completion(.failure(NetworkError.invalidRequest))
-            return
+    func fetchNews(pageNumber: Int, pageSize: Int, category: NewsCategory) async throws -> [Article] {
+        
+        let request = makeNewsRequest(
+            pageNumber: pageNumber,
+            pageSize: pageSize,
+            category: category
+        )
+        
+        let (data, response) = try await urlSession.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw NetworkError.invalidRequest
         }
         
-        self.task = urlSession.objectTask(for: request) { (result: Result<NewsRequest, Error>) in
-            switch result {
-            case .success(let response):
-                let articles = response.articles
-                completion(.success(articles))
-            case .failure(let error):
-                if case let NetworkError.httpStatusCode(code) = error {
-                    print("NewsApi вернул ошибку. Код: \(code)")
-                } else {
-                    print("Ошибка: \(error.localizedDescription)")
-                }
-                completion(.failure(error))
-            }
+        guard (200...299).contains(httpResponse.statusCode) else {
+            throw NetworkError.httpStatusCode(httpResponse.statusCode)
         }
-        task?.resume()
+        
+        decoder.dateDecodingStrategy = .iso8601
+        
+        let decoded = try decoder.decode(NewsRequest.self, from: data)
+        
+        return decoded.articles
     }
     
 }

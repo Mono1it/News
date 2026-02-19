@@ -15,6 +15,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		096250E92F45EB81002699B4 /* Helpers */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		096250EE2F45EB8A002699B4 /* WebView */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		09CBC17B2F18C15500347FE9 /* News */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = News;
@@ -37,6 +47,8 @@
 		09CBC1702F18C15500347FE9 = {
 			isa = PBXGroup;
 			children = (
+				096250E92F45EB81002699B4 /* Helpers */,
+				096250EE2F45EB8A002699B4 /* WebView */,
 				09CBC17B2F18C15500347FE9 /* News */,
 				09CBC17A2F18C15500347FE9 /* Products */,
 			);
@@ -66,6 +78,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				096250E92F45EB81002699B4 /* Helpers */,
+				096250EE2F45EB8A002699B4 /* WebView */,
 				09CBC17B2F18C15500347FE9 /* News */,
 			);
 			name = News;

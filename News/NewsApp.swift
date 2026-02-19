@@ -1,12 +1,12 @@
 import SwiftUI
 
 @main
+@MainActor
 struct NewsApp: App {
-    @StateObject var viewModel = NewsViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            NewsListView()
-                .environmentObject(viewModel)
+            NewsListView(viewModel: NewsViewModel())
         }
     }
 }
